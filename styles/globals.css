@@ -2,11 +2,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
+  line-height: 1.6; */
+  font-family: "Times New Roman", Times, serif;
   font-size: 18px;
-  background-color: #fbf5f5;
+  background-color: #ade0ee;
 }
 
 * {
