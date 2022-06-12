@@ -34,3 +34,14 @@
   margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
+
+.twitterIcon {
+  text-align: center;
+  cursor: pointer;
+  color: #1da1fe;
+  vertical-align: -7px;
+}
+
+.section {
+  font-family: "Times New Roman", Times, serif;
+}

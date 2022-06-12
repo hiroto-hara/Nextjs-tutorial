@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import Layout from "../components/Layout";
+import Layout, { siteTitle } from "../components/Layout";
 import utilStyle from "../styles/utils.module.css";
 import { getPostsData } from "../lib/post";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 //SSGの場合
 export async function getStaticProps() {
@@ -20,15 +20,22 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout>
+    <Layout home>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
       <section className={utilStyle.headingMd}>
         <p>
-          私はフルスタックエンジニアです/Udemy講師として活動しています/好きな言語はJavaScriptです
+          Thank you for visiting my flower photo blog.
+          <br />
+          I am learning programming.
+          <br />
+          HTML/CSS/JavaScript/TypeScript/React/Next.js
         </p>
       </section>
 
-      <section>
-        <h2>📝エンジニアのブログ</h2>
+      <section className={styles.section}>
+        <h2>*My flower blog*</h2>
         <div className={styles.grid}>
           {allPostsData.map(({ id, title, data, thumbnail }) => (
             <article key={id}>
@@ -39,10 +46,17 @@ export default function Home({ allPostsData }) {
                 <a className={utilStyle.boldText}>{title}</a>
               </Link>
               <br />
-              <small className={utilStyle.lightText}>february 23, 2020</small>
+              <small className={utilStyle.lightText}>@hiro99000203</small>
             </article>
           ))}
         </div>
+      </section>
+      <section>
+        <h2>My Link</h2>
+        Twitter
+        <Link href="https://twitter.com/hiro99000203">
+          <TwitterIcon className={styles.twitterIcon} />
+        </Link>
       </section>
     </Layout>
   );
