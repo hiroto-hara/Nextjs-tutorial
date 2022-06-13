@@ -35,7 +35,7 @@ export default function Home({ allPostsData }) {
       </section>
 
       <section className={styles.section}>
-        <h2>*My flower blog*</h2>
+        <h2 className={utilStyle.title}>*My flower blog*</h2>
         <div className={styles.grid}>
           {allPostsData.map(({ id, title, data, thumbnail }) => (
             <article key={id}>
