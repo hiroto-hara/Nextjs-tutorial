@@ -4,13 +4,13 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "** hiro **";
-export const siteTitle = "Next.js Blog";
+export const siteTitle = "hiro-flower-blog";
 
 function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/profileIcon.ico" />
       </Head>
       <header className={styles.header}>
         {home ? (
